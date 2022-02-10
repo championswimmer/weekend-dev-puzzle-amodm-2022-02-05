@@ -84,9 +84,11 @@ if __name__ == "__main__":
         times = int(sys.argv[3])
         data = read_dataset()
         # warm up
-        count_times(data, lessthan, 1)
-        # start and measure
-        tt = time.process_time()
-        c = count_times(data, lessthan, times)
-        tt = time.process_time() - tt
-        print(f"Number of matching entries = {c}. Time taken = {tt}s")
+        count = count_times(data, lessthan, 1)
+        count = count_times(data, lessthan, 1)
+        # start
+        begin = time.time()
+        count = count_times(data, lessthan, 1)
+        end = time.time()
+        # start and mecat data | ./finder count 33000 10000
+        print(f"Number of matching entries = {count}. Time taken = {end - begin }")
